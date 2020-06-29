@@ -10,6 +10,9 @@ type TdadosFuncionario = record
 				contato : string[100];
 				endereco : string[50];
 				cargo : string[30];
+				cro : integer;
+				comissao : integer;
+				salario : integer;
 		 end;
 		 
 		 
@@ -45,6 +48,12 @@ begin
 								  readln(listaFuncionario[i].endereco); 
 								 writeln('Informe o cargo do funcionário');
 								  readln(listaFuncionario[i].cargo);
+								 writeln('Informe o cro do funcionário');
+								  readln(listaFuncionario[i].cro);
+								 writeln('Informe a comissão do funcionário');
+								  readln(listaFuncionario[i].comissao);
+								 writeln('Informe o salário do funcionário');
+								  readln(listaFuncionario[i].salario);
 								  
 								 writeln('Cadastrado!');
 								 
@@ -78,6 +87,12 @@ begin
 								  readln(listaFuncionario[i].endereco); 
 								 writeln('Informe o cargo do funcionário');
 								  readln(listaFuncionario[i].cargo);
+								 writeln('Informe o cro do funcionário');
+								  readln(listaFuncionario[i].cro);
+								 writeln('Informe a comissão do funcionário');
+								  readln(listaFuncionario[i].comissao);
+								 writeln('Informe o salário do funcionário');
+								  readln(listaFuncionario[i].salario);
 								  
 								 writeln('Atualizado e Salvo!');
 			     end
@@ -108,6 +123,9 @@ begin
 			           listaFuncionario[i].contato := '';
 			           listaFuncionario[i].endereco := '';
 			           listaFuncionario[i].cargo := '';
+			           listaFuncionario[i].cro := 0;
+			           listaFuncionario[i].comissao := 0;
+			           listaFuncionario[i].salario := 0;
 			      end;
 			 end;
 end;
@@ -120,12 +138,16 @@ begin
 			begin
 			    if (listaFuncionario[i].cpf > 0) then
 			     begin
+			     		 writeln(' ');
 			         writeln('Nome: ', listaFuncionario[i].nome);
 			         writeln('Data de Nascimento: ', listaFuncionario[i].dt_nascimento);
 			         writeln('CPF: ', listaFuncionario[i].cpf);
 			         writeln('Contato: ', listaFuncionario[i].contato);
 			         writeln('Endereço: ', listaFuncionario[i].endereco);
 			         writeln('Cargo: ', listaFuncionario[i].cargo);
+			         writeln('CRO: ', listaFuncionario[i].cro);
+			         writeln('Comissão: ', listaFuncionario[i].comissao);
+			         writeln('Salário: ', listaFuncionario[i].salario);
 			         writeln('________________________________________');
 			     end;
 			end;
